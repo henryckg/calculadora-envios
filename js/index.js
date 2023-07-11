@@ -67,7 +67,7 @@ switch (tipoEnvio) {
 
 //Opción para asegurar el envío
 
-let asegurar = prompt("Deseas asegurar el envío?. \nIngrese: Y ó N")
+let asegurar = prompt("Desea asegurar el envío?. \nIngrese: Y ó N")
 
 if (asegurar == "Y" || asegurar == "y"){   
     let precioProducto = parseInt(prompt("Ingrese el valor del producto en USD"))
