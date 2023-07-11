@@ -1,7 +1,7 @@
 // Calculadora de envíos
 
 //Declaro variable global
-let resultadoEnvio
+let resultado
 
 
 //Funciones
@@ -19,13 +19,13 @@ function calcularEnvio(tarifaEnvio){
 
         //Para el cáculo de envío se toma en cuenta el número mayor entre peso y peso volumétrico
         if (peso >= pesoVolumetrico){
-            resultadoEnvio = peso * parseFloat(tarifaEnvio)
+            resultado = peso * parseFloat(tarifaEnvio)
         } else if (peso < pesoVolumetrico){
-            resultadoEnvio = pesoVolumetrico * tarifaEnvio
+            resultado = pesoVolumetrico * tarifaEnvio
         } else{
             alert("Hay alguna medida que no corresonde a un valor númerico. Haga la operación nuevamente")
         }
-    } while (isNaN(resultadoEnvio))
+    } while (isNaN(resultado))
 }
 
 const suma = function (a, b) { return a + b}
@@ -71,11 +71,11 @@ let asegurar = prompt("Desea asegurar el envío?. \nIngrese: Y ó N")
 
 if (asegurar == "Y" || asegurar == "y"){   
     let precioProducto = parseInt(prompt("Ingrese el valor del producto en USD"))
-    let nuevoPrecio = suma(resultadoEnvio, seguro(precioProducto))
-    alert("El valor del envío, incluyendo el seguro, es: USD " + nuevoPrecio + "\n(Monto sin seguro: USD " + resultadoEnvio + ")")
+    let nuevoPrecio = suma(resultado, seguro(precioProducto))
+    alert("El valor del envío, incluyendo el seguro, es: USD " + nuevoPrecio + "\n(Monto sin seguro: USD " + resultado + ")")
     
 } else if (asegurar == "N" || asegurar == "n"){
-    alert("El valor del envío es: USD " + resultadoEnvio + ". (Sin seguro)")
+    alert("El valor del envío es: USD " + resultado + ". (Sin seguro)")
 } else{
-    alert("No ha ingresado una opción de seguro válida.\nEl valor del envío es USD " + resultadoEnvio + ". (Sin seguro) ")
+    alert("No ha ingresado una opción de seguro válida.\nEl valor del envío es USD " + resultado + ". (Sin seguro) ")
 }
