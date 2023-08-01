@@ -149,13 +149,13 @@ let valorAsegurado = suma(resultado, seguro(totalValor))
 
 if ((asegurado == "Y" || asegurado == "y") && tipoEnvio == "terrestre"){   
     
-    alert(`El valor del envío, incluyendo el seguro, es: USD $${valorAsegurado}
+    alert(`El valor del envío, incluyendo el seguro, es: USD $${valorAsegurado.toFixed(2)}
 (Monto sin seguro: USD $${resultado.toFixed(2)})    
 Fecha máxima de entrega: ${calcularFechaEnvio(plazoTerrestre)}`)
 
 } else if ((asegurado == "Y" || asegurado == "y") && (tipoEnvio == "aereo" || tipoEnvio =="aéreo")){   
     
-    alert(`El valor del envío, incluyendo el seguro, es: USD $${valorAsegurado}
+    alert(`El valor del envío, incluyendo el seguro, es: USD $${valorAsegurado.toFixed(2)}
 (Monto sin seguro: USD $${resultado.toFixed(2)})    
 Fecha máxima de entrega: ${calcularFechaEnvio(plazoAereo)}`)
 
