@@ -125,10 +125,10 @@ console.log(productos)
 
 //Se utilizan métodos para sumar parámetros de los objetos y utilizarlos después.
 const totalPeso = productos.reduce((acumulador, prod) => acumulador + prod.peso, 0)
-console.log(`El peso total es: ${totalPeso.toFixed(2)}`)
+console.log(`El peso total es: ${totalPeso.toFixed(2)} kg`)
 
 const totalPesoVol = productos.reduce((acumulador, prod) => acumulador + prod.pesoVol, 0)
-console.log(`El peso volumétrico total es: ${totalPesoVol.toFixed(2)}`)
+console.log(`El peso volumétrico total es: ${totalPesoVol.toFixed(2)} kg`)
 
 const totalValor = productos.reduce((acumulador, prod) => acumulador + prod.valor, 0)
 console.log(`El valor total de los productos es: USD $${totalValor.toFixed(2)}`)
